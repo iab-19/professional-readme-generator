@@ -4,6 +4,7 @@ const fs = require('fs');
 // to allow use of file system (writeFile, readFile, )
 const inquirer = require('inquirer');
 // Allow use of inquirer to ask user for inputs
+
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
@@ -19,15 +20,78 @@ const questions = ['1. Enter the title of your project: ',
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile('README.md', data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
 
 // Function call to initialize app
-init();
+// init();
 
 // Export questions to generateMarkdown file
-module.exports = {
-    questions,
-};
+// module.exports = {
+//     questions,
+// };
+
+
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      message: questions[0],
+      name: 'title',
+    },
+    {
+      type: 'input',
+      message: questions[1],
+      name: 'description',
+    },
+    {
+      type: 'input',
+      message: questions[2],
+      name: 'install',
+    },
+    {
+      type: 'input',
+      message: questions[3],
+      name: 'usage',
+    },
+    {
+      type: 'input',
+      message: questions[4],
+      name: 'contribution',
+    },
+    {
+      type: 'input',
+      message: questions[5],
+      name: 'test',
+    },
+    {
+      type: 'list',
+      message: questions[6],
+      name: 'license',
+      choices: ['none', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License',
+    'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License',
+    'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0',
+    'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1',
+    'Mozilla Public License 2.0', 'The Unilicense'],
+    },
+    {
+      type: 'input',
+      message: questions[7],
+      name: 'github',
+    },
+    {
+      type: 'input',
+      message: questions[8],
+      name: 'email',
+    },
+  ])
+  .then ((data) => {
+    let markdown = generateMarkdown(data);
+    fs.writeFile('./utils/README.md', markdown, (err) =>
+      err?
+      console.error(err): console.log('File created!')
+      )
+  }
+  )
