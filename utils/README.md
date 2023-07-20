@@ -40,7 +40,8 @@
   ![alt text](assets/images/screenshot.png)
   " -->
   ## License
-  none
+  Covered under the undefined
+
 
   <!-- The last section of a high-quality README file is the license. This lets other developer know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicence.com/). -->
 
@@ -58,7 +59,7 @@
   <!-- Go the extra mile and write tests for your application. Then provide examples on how to run them here. -->
 
   ## Questions
-
+  A link to my [GitHub Profile](https://www.github.com/vegito)
 
   If you have any questions, please reach out to
 
