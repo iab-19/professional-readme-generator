@@ -21,5 +21,7 @@ WHEN I enter my email address
 THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions  
 WHEN I click on the links in the Table of Contents  
 THEN I am taken to the corresponding section of the README
----
+***
 ![image of README file generated](/Resources/Picture_of_README.png)
+***
+Link to walkthrough video: https://drive.google.com/file/d/1NojUbFDqiTX1kCs7npH5nlCtDMIjIOHR/view
