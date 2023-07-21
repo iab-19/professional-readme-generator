@@ -1,14 +1,7 @@
-// const index = require('../index.js');
 
-// const fs = require('fs');
-// // TODO: Create a function that returns a license badge based on which license is passed in
-
-// // const { default: inquirer } = require("inquirer");
-// const inquirer = require('inquirer');
-
-// If there is no license, return an empty string
+// Generate a license badge. If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let badge = '';
+  let badge;
   switch(license){
     case 'Apache License 2.0':
       badge ='[![License](https://img.shields.io/badge/License-Apache_2.0-navy.svg)](https://opensource.org/licenses/Apache-2.0)';
@@ -158,65 +151,5 @@ function generateMarkdown(data) {
 `;
 }
 
-// inquirer
-//   .prompt([
-//     {
-//       type: 'input',
-//       message: index.questions[0],
-//       name: 'title',
-//     },
-//     {
-//       type: 'input',
-//       message: index.questions[1],
-//       name: 'description',
-//     },
-//     {
-//       type: 'input',
-//       message: index.questions[2],
-//       name: 'install',
-//     },
-//     {
-//       type: 'input',
-//       message: index.questions[3],
-//       name: 'usage',
-//     },
-//     {
-//       type: 'input',
-//       message: index.questions[4],
-//       name: 'contribution',
-//     },
-//     {
-//       type: 'input',
-//       message: index.questions[5],
-//       name: 'test',
-//     },
-//     {
-//       type: 'list',
-//       message: index.questions[6],
-//       name: 'license',
-//       choices: ['none', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License',
-//     'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License',
-//     'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0',
-//     'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1',
-//     'Mozilla Public License 2.0', 'The Unilicense'],
-//     },
-//     {
-//       type: 'input',
-//       message: index.questions[7],
-//       name: 'github',
-//     },
-//     {
-//       type: 'input',
-//       message: index.questions[8],
-//       name: 'email',
-//     },
-//   ])
-//   .then ((data) => {
-//     let markdown = generateMarkdown(data);
-//     fs.writeFile('README.md', markdown, (err) =>
-//       err?
-//       console.error(err): console.log('File created!')
-//       )
-//   }
-//   )
+
 module.exports = generateMarkdown;
